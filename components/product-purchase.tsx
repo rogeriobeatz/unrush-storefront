@@ -7,7 +7,7 @@ export default function ProductPurchase({product}:{product:StoreProduct}) {
  const variations=product.variations||[];
  const availableSizes=useMemo(()=>variations.map(v=>{
   const value=v.attributes.find(a=>a.name.toLowerCase()===(sizeAttribute?.name||"tamanho").toLowerCase())?.value||v.attributes[0]?.value||"";
-  return {id:v.id,value,slug:value.toLowerCase()};
+  return {id:v.id,value:value.toUpperCase(),slug:value.toLowerCase()};
  }),[variations,sizeAttribute]);
  const [selected,setSelected]=useState(availableSizes[0]?.value||"");
  const selectedVariation=availableSizes.find(v=>v.value.toLowerCase()===selected.toLowerCase());
