@@ -33,7 +33,7 @@ export function SiteHeader() {
    </nav>
    <div className="unr-header-actions">
     <button className="unr-icon-btn" type="button" aria-label="Buscar produtos" aria-expanded={searchOpen} onClick={()=>setSearchOpen(!searchOpen)}><Icon name={searchOpen?"close":"search"} size={22}/></button>
-    <a href="https://unrush.com.br/cart-2/" className="unr-cart-btn" aria-label="Abrir carrinho"><Icon name="bag" size={21}/></a>
+    <a href="/carrinho" className="unr-cart-btn" aria-label="Abrir carrinho"><Icon name="bag" size={21}/></a>
    </div>
   </div>
   {searchOpen&&<form className="unr-searchbar unr-container" action="/loja"><Icon name="search" size={19}/><input type="search" name="q" autoFocus placeholder="BUSQUE UMA ESTAMPA, CARRO OU CULTURA..." value={term} onChange={e=>setTerm(e.target.value)} aria-label="Buscar produtos"/><button type="submit">VER RESULTADOS <Icon name="diagonal" size={16}/></button></form>}
@@ -45,7 +45,7 @@ export function SiteFooter() {
   <div className="unr-footer-top">
    <div><Brand invert/><p>Streetwear automotivo brasileiro.<br/>Curitiba / PR. SLOW OBSESSION™</p></div>
    <div><h3>EXPLORE</h3><Link href="/loja">Drop 001</Link><a href="/#manifesto">Nossa história</a><a href="/#qualidade">Qualidade</a></div>
-   <div><h3>SUA CONTA</h3><a href="https://unrush.com.br/my-account-2/">Minha conta</a><a href="https://unrush.com.br/cart-2/">Carrinho</a><a href="https://unrush.com.br/checkout-2/">Checkout</a></div>
+   <div><h3>SUA CONTA</h3><a href="https://unrush.com.br/my-account-2/">Minha conta</a><a href="/carrinho">Carrinho</a><a href="/checkout">Checkout</a></div>
    <div><h3>COMUNIDADE</h3><a href="https://instagram.com/unrushco" target="_blank" rel="noreferrer">Instagram @unrushco</a><Link href="/loja">Loja online</Link></div>
   </div>
   <div className="unr-footer-bottom"><span>© {new Date().getFullYear()} UNRUSH. TODOS OS DIREITOS RESERVADOS.</span><span>STATUS NÃO COMPRA RESPEITO. PAIXÃO, SIM.</span></div>
