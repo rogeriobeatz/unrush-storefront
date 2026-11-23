@@ -11,7 +11,7 @@ export type StoreProduct = {
   categories:{id:number;name:string;slug:string}[];
 };
 const baseUrl=(process.env.NEXT_PUBLIC_WC_URL||"https://unrush.com.br").replace(/\/$/,"");
-const favorites=["2475","2480","2477","2478","2476","2479","23"];
+const favorites=["2558","2475","2480","2477","2478","2476","2479","23"];
 const hidden=["2474"];
 function rankProducts(products:StoreProduct[]) {
   return products.filter(p=>!hidden.includes(String(p.id))).sort((a,b)=>{
