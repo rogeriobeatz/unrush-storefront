@@ -37,7 +37,9 @@ export async function getProductBySlug(slug:string):Promise<StoreProduct|null> {
 }
 export function formatPrice(product:StoreProduct) {
   const minor=product.prices?.currency_minor_unit??2;
-  const amount=Number(product.prices?.price||0)/Math.pow(10,minor);
+  const raw=Number(product.prices?.price||0);
+  if(!raw)return "PREÇO INDISPONÍVEL";
+  const amount=raw/Math.pow(10,minor);
   return new Intl.NumberFormat("pt-BR",{style:"currency",currency:product.prices?.currency_code||"BRL"}).format(amount);
 }
 export function stripHtml(value:string) {
