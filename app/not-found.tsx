@@ -1,0 +1,3 @@
+import Link from "next/link";
+import {SiteHeader,SiteFooter} from "@/components/storefront-shared";
+export default function NotFound(){return <div id="unrush-storefront"><SiteHeader/><main className="unr-cart-bridge"><div className="unr-container"><p className="unr-eyebrow">404 / LOST IN THE GARAGE</p><h1>PEÇA NÃO<br/>ENCONTRADA.</h1><p>Essa página saiu de linha ou não existe mais. Volte para o drop e encontre outra peça.</p><Link className="unr-button" href="/loja">VOLTAR AO DROP ↗</Link></div></main><SiteFooter/></div>;}
