@@ -632,3 +632,9 @@ body.unrush-react-storefront #unrush-storefront {
 #unrush-storefront .unr-cart-bridge h1{font:900 clamp(65px,10vw,120px)/.85 'Barlow Condensed';margin:25px 0}
 #unrush-storefront .unr-cart-bridge p{max-width:580px;color:#777;line-height:1.8;margin-bottom:28px}
 @media(max-width:680px){#unrush-storefront .unr-product-layout{grid-template-columns:1fr;gap:10px}#unrush-storefront .unr-product-info-panel{position:static;padding:10px 0}#unrush-storefront .unr-product-gallery{gap:7px}#unrush-storefront .unr-product-page{padding-top:15px}#unrush-storefront .unr-shop-page{padding:42px 0 70px}}
+
+#unrush-storefront .unr-size-list .unr-size-option{appearance:none;background:transparent;border:1px solid #c8c3ba;padding:12px 18px;font:800 15px 'Barlow Condensed';color:var(--unr-black);min-width:48px;transition:background .2s,color .2s,border-color .2s}
+#unrush-storefront .unr-size-list .unr-size-option.active,#unrush-storefront .unr-size-list .unr-size-option:hover{background:var(--unr-black);border-color:var(--unr-black);color:#fff}
+#unrush-storefront .unr-purchase-panel{margin-top:32px}
+#unrush-storefront .unr-add-to-cart{width:100%;margin-top:5px}
+#unrush-storefront .unr-purchase-panel .unr-commerce-note{margin-top:16px}
